@@ -1,11 +1,11 @@
 import xml.etree.ElementTree as ET
 
-tree = ET.parse('rutas/rutas_prueba.xml')
-treeToAdd = ET.parse('rutas/rutas_prueba_agregar.xml')
+#tree = ET.parse('rutas/rutas_prueba.xml')
+#treeToAdd = ET.parse('rutas/rutas_prueba_agregar.xml')
 
-root = tree.getroot()
+#root = tree.getroot()
 
-rootToAdd =  treeToAdd.getroot()
+#rootToAdd =  treeToAdd.getroot()
 
 #for child in root:
 #    for test in child:
