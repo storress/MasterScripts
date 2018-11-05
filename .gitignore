@@ -213,3 +213,5 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.gitignore.io/api/python,pycharm
+
+rutas/rutas0k-110k.xml
