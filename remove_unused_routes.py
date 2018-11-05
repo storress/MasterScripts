@@ -21,6 +21,12 @@ for routeDistribution in root.iter('routeDistribution'):
             if probability == 0:
                 routeDistribution.remove(route)
 
+
+def sortchildrenby(parent, attr):
+    parent[:] = sorted(parent, key=lambda child: child.get(attr))
+
+sortchildrenby(root, 'depart')
+
 tree.write('rutas/rutas-sin-reemplazos0k-110k.xml')
 
 
