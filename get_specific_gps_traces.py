@@ -20,8 +20,9 @@ with open('rutas/trazas_gps_filtradas.txt', 'rb') as csvfile:
             print(row)
             filteredTraces.append(row)
             counter += 1
+filteredTraces = sorted(filteredTraces, key=lambda row: row[1], reverse=True)
 
-with open('important_intersection_traces.csv', mode='w') as employee_file:
+with open('rutas/important_intersection_traces.csv', mode='w') as employee_file:
     employee_writer = csv.writer(employee_file, delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
     for trace in filteredTraces:
