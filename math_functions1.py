@@ -56,11 +56,11 @@ def estimated_next_position(prev_pos_x, prev_pos_y, pos_x, pos_y, prev_velocity,
 
 def error(velocity, e_velocity, pos_x, pos_y, e_pos_x, e_pos_y):
 
-    velocity_error = math.pow(velocity - e_velocity, 2.0)
+    velocity_error = math.pow((velocity - e_velocity)/1.2, 2.0)
     pos_magnitude = magnitude(pos_x, pos_y)
     e_pos_magnitude = magnitude(e_pos_x, e_pos_y)
 
-    position_error = math.pow(pos_magnitude - e_pos_magnitude, 2.0)
+    position_error = math.pow((pos_magnitude - e_pos_magnitude)/1.2, 2.0)
 
     # para print
     global pos_magnitud
@@ -97,13 +97,12 @@ def probable_turn(prev_velocity, prev_pos_x, prev_pos_y, velocity, pos_x, pos_y,
 
             #para print
 
-
             e_next_position = estimated_next_position(pos_x, pos_y, prev_pos_x,
                                                       prev_pos_y, prev_velocity, e_acceleration, time_step)
 
             e_error = error(velocity, e_next_position[2], pos_x, pos_y,
                             e_next_position[0], e_next_position[1])
-            p_density = (1.0 / (2.0 * math.pi * 1.2)) * math.exp(-1*(1.0/2.0) * math.pow(e_error, 2.0))
+            p_density = (1.0 / (2.0 * math.pi * 1.2 * 1.2)) * math.exp(-1*(1.0/2.0) * math.pow(e_error, 2.0))
             p_hypothesis = 0.5 * model * p_accel_model
             total = total + p_hypothesis * p_density
             probability_models.append((p_hypothesis * p_density))
@@ -175,7 +174,7 @@ def probable_turn(prev_velocity, prev_pos_x, prev_pos_y, velocity, pos_x, pos_y,
     # print("Probabilidad H : " + str(p_hipotesis))
     # print("Densidad*Probabilidad H: " + str(densidad_por_probabilidad))
 
-    if p_turn > 0.6905 and average != 0:
+    if p_turn > 0.689 and average != 0:
         return 1, p_turn, e_next_position
 
     else:
