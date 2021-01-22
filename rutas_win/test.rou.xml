@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 01/29/20 22:14:14 by Eclipse SUMO netedit Version 1.2.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\Salo\Downloads\TAPASCologne-0.32.0\TAPASCologne-0.32.0\test.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\Salo\Downloads\TAPASCologne-0.32.0\TAPASCologne-0.32.0\test.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="true"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="0"/>
+        <junctions.limit-turn-speed value="-1"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <route-files value="C:\Users\Salo\Downloads\TAPASCologne-0.32.0\TAPASCologne-0.32.0\test.rou.xml"/>
+    </netedit>
+
+</configuration>
+-->
+
+<routes>
+    <route id="route_0" edges="-319929498#3 -319929498#2" />
+    <!--<route id="route_1" edges="-319929498#3 -319929498#2" />-->
+    <route id="route_2" edges="-319929498#3 32038440#11" />
+    <vehicle id="vehicle_0" type="DEFAULT_VEHTYPE" depart="0.00" route="route_0"/>
+    <!--<vehicle id="vehicle_14" type="DEFAULT_BIKETYPE" depart="0.00" color="green" route="route_0"/>-->
+    <!--<vehicle id="vehicle_1" type="DEFAULT_VEHTYPE" depart="2.00" route="route_0"/>-->
+    <!--<vehicle id="vehicle_2" type="DEFAULT_VEHTYPE" depart="4.00" route="route_0"/>-->
+    <vehicle id="vehicle_3" type="DEFAULT_VEHTYPE" depart="6.00" route="route_2"/>
+    <!--<vehicle id="vehicle_4" type="DEFAULT_VEHTYPE" depart="8.00" route="route_0"/>
+    <vehicle id="vehicle_5" type="DEFAULT_VEHTYPE" depart="10.00" route="route_2"/>-->
+    <!--<vehicle id="vehicle_6" type="DEFAULT_VEHTYPE" depart="12.00" route="route_0"/>
+    <vehicle id="vehicle_7" type="DEFAULT_VEHTYPE" depart="14.00" route="route_0"/>-->
+    <vehicle id="vehicle_8" type="DEFAULT_VEHTYPE" depart="16.00" route="route_2"/>
+    <vehicle id="vehicle_10" type="DEFAULT_VEHTYPE" depart="18.00" route="route_0"/>
+    <vehicle id="vehicle_11" type="DEFAULT_VEHTYPE" depart="19.00" route="route_2"/>
+    <vehicle id="vehicle_12" type="DEFAULT_VEHTYPE" depart="23.00" route="route_0"/>
+    <vehicle id="vehicle_13" type="DEFAULT_VEHTYPE" depart="25.00" route="route_0"/>
+    <vehicle id="vehicle_15" type="DEFAULT_VEHTYPE" depart="30.00" route="route_2"/>
+    <vehicle id="vehicle_16" type="DEFAULT_VEHTYPE" depart="31.00" route="route_0"/>
+    <vehicle id="vehicle_17" type="DEFAULT_VEHTYPE" depart="32.00" route="route_2"/>
+
+    
+
+</routes>
