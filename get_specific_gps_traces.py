@@ -15,7 +15,7 @@ bottomPositionX = 11600.0
 topPositionY = 12600.0
 bottomPositionY = 12400.0
 
-with open('rutas_win/single_gps.csv', 'r') as csvfile:
+with open('rutas_win/gps_density_19vSpeed.csv', 'r') as csvfile:
     rowReader = csv.reader(csvfile, delimiter='\t', quotechar='|')
     counter = 0
     for row in rowReader:
@@ -30,7 +30,7 @@ with open('rutas_win/single_gps.csv', 'r') as csvfile:
             counter += 1
 filteredTraces = sorted(filteredTraces, key=lambda row: row[3], reverse=False)
 
-with open('rutas_win/single_gps_ordenadas.csv', mode='w', newline='') as employee_file:
+with open('rutas_win/gps_density_19vSpeed_ordenadas.csv', mode='w', newline='') as employee_file:
     employee_writer = csv.writer(employee_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     #employee_writer = csv.writer(employee_file)
 

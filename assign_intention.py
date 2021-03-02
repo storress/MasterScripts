@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 
 #initialize xml trees
-tree = ET.parse('rutas_win/single_route.xml')
+tree = ET.parse('rutas_win/density_19vSpeed_routes.xml')
 root = tree.getroot()
 rows = []
 # right = '-32038440#12 -319929498#2'
@@ -15,7 +15,7 @@ right = '-319929498#3 32038440#11'
 straight = '-319929498#3 -319929498#2'
 left = '-32038440#12 319929498#3'
 
-with open('rutas_win/single_gps_ordenadas.csv', 'r') as csvfile:
+with open('rutas_win/gps_density_19vSpeed_ordenadas.csv', 'r') as csvfile:
     rowReader = csv.reader(csvfile, delimiter=',')
     i = 0
     current_route = ''
@@ -57,7 +57,7 @@ with open('rutas_win/single_gps_ordenadas.csv', 'r') as csvfile:
         # print(edges)
         i += 1
 
-with open('rutas_win/single_intencion.csv', mode='w', newline='') as routes_file:
+with open('rutas_win/final_density_19vSpeed.csv', mode='w', newline='') as routes_file:
     routes_writer = csv.writer(routes_file)
 
     for route_row in rows:

@@ -1,0 +1,570 @@
+Pasos:
+
+ ../../../src/sumo-1.2.0/bin/sumo -c density.sumo.cfg --fcd-output density_2vSpeed.xml --step-length 0.1;
+ ../../../src/sumo-1.2.0/bin/sumo -c density.sumo.cfg --vehroute-output density_2vSpeed_routes.xml --step-length 0.1;
+python ../../../src/sumo-1.2.0/tools/traceExporter.py --fcd-input density_2vSpeed.xml --gpsdat-output gps_density_2vSpeed.csv
+
+
+python get_specific_gps_traces.py
+python assign_intention.py
+python prueba1.py
+
+
+1.- Ejecutar la simulación con: (Cambiar el nombre de archivo de ruta en density.sumo.cfg)
+    ../../../src/sumo-1.2.0/bin/sumo -c density.sumo.cfg --fcd-output density_2vSpeed.xml --step-length 0.1
+2.- Obtener rutas
+    ../../../src/sumo-1.2.0/bin/sumo -c density.sumo.cfg --vehroute-output density_2vSpeed_routes.xml --step-length 0.1
+3.- Obtener trazas gps
+    python ../../../src/sumo-1.2.0/tools/traceExporter.py --fcd-input density_2vSpeed.xml --gpsdat-output gps_density_2vSpeed.csv
+4.- Ordenar rutas gps (modificar el código para seleccionar los archivos de entrada y salida)
+    python get_specific_gps_traces.py
+5.- Asignar intención de giro (definir nombres de archivo de entrada y salida)
+    python assign_intention.py
+
+6.- Obtener resultados de algoritmo de predicción (modificar el codigo para colocar el archivo de entrada)
+    python prueba1.py
+
+python
+
+1vSpeed:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 147
+True positives : 147
+False positives : 0
+True negatives : 153
+False negatives : 0
+Total : 300
+Accuracy : 1.0
+
+2vSpeed:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 152
+True positives : 152
+False positives : 0
+True negatives : 147
+False negatives : 0
+Total : 299
+Accuracy : 1.0
+
+3vSpeed:
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 140
+True positives : 137
+False positives : 3
+True negatives : 159
+False negatives : 0
+Total : 299
+Accuracy : 0.9899665551839465
+
+rutas_win/final_density_4vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 175
+True positives : 164
+False positives : 11
+True negatives : 124
+False negatives : 0
+Total : 299
+Accuracy : 0.9632107023411371
+
+rutas_win/final_density_5vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 167
+True positives : 143
+False positives : 24
+True negatives : 132
+False negatives : 0
+Total : 299
+Accuracy : 0.919732441471572
+
+rutas_win/final_density_6vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 183
+True positives : 151
+False positives : 32
+True negatives : 117
+False negatives : 0
+Total : 300
+Accuracy : 0.8933333333333333
+
+FALTA EL DENSIDAD 7V
+
+rutas_win/final_density_8vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 218
+True positives : 156
+False positives : 62
+True negatives : 82
+False negatives : 0
+Total : 300
+Accuracy : 0.7933333333333333
+
+rutas_win/final_density_9vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 227
+True positives : 139
+False positives : 88
+True negatives : 72
+False negatives : 0
+Total : 299
+Accuracy : 0.705685618729097
+
+rutas_win/final_density_10vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 230
+True positives : 151
+False positives : 79
+True negatives : 70
+False negatives : 0
+Total : 300
+Accuracy : 0.7366666666666667
+
+rutas_win/final_density_11vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 223
+True positives : 158
+False positives : 65
+True negatives : 77
+False negatives : 0
+Total : 300
+Accuracy : 0.7833333333333333
+
+rutas_win/final_density_12vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 206
+True positives : 141
+False positives : 65
+True negatives : 94
+False negatives : 0
+Total : 300
+Accuracy : 0.7833333333333333
+
+rutas_win/final_density_13vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 204
+True positives : 139
+False positives : 65
+True negatives : 96
+False negatives : 0
+Total : 300
+Accuracy : 0.7833333333333333
+
+rutas_win/final_density_14vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 214
+True positives : 157
+False positives : 57
+True negatives : 85
+False negatives : 0
+Total : 299
+Accuracy : 0.8093645484949833
+
+rutas_win/final_density_15vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 211
+True positives : 163
+False positives : 48
+True negatives : 89
+False negatives : 0
+Total : 300
+Accuracy : 0.84
+
+rutas_win/final_density_16vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 216
+True positives : 155
+False positives : 61
+True negatives : 84
+False negatives : 0
+Total : 300
+Accuracy : 0.7966666666666666
+
+rutas_win/final_density_17vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 207
+True positives : 141
+False positives : 66
+True negatives : 93
+False negatives : 0
+Total : 300
+Accuracy : 0.78
+
+rutas_win/final_density_18vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 221
+True positives : 164
+False positives : 57
+True negatives : 79
+False negatives : 0
+Total : 300
+Accuracy : 0.81
+
+rutas_win/final_density_19vSpeed.csv
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 220
+True positives : 152
+False positives : 68
+True negatives : 80
+False negatives : 0
+Total : 300
+Accuracy : 0.7733333333333333
+
+
+
+
+1v:
+Cantidad de rutas: 300
+Cantidad de detecciones correctas: 172
+True positives : 172
+False positives : 0
+True negatives : 127
+False negatives : 0
+Total : 299
+Accuracy : 1.0
+
+2v:
+Cantidad de rutas: 300
+Cantidad de detecciones correctas: 146
+True positives : 146
+False positives : 0
+True negatives : 154
+False negatives : 0
+Total : 300
+Accuracy : 1.0
+
+3v:
+Cantidad de rutas: 300
+Cantidad de detecciones correctas: 147
+True positives : 146
+False positives : 1
+True negatives : 153
+False negatives : 0
+Total : 300
+Accuracy : 0.9966666666666667
+
+4v: 
+
+True positives : 162
+False positives : 7
+True negatives : 131
+False negatives : 0
+Total : 300
+Accuracy : 0.9766666666666667
+
+5v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones correctas: 275
+True positives : 144
+False positives : 24
+True negatives : 131
+False negatives : 0
+Total : 299
+Accuracy : 0.919732441471572
+
+6v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 175
+True positives : 139
+False positives : 36
+True negatives : 125
+False negatives : 0
+Total : 300
+Accuracy : 0.88
+
+7v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 203
+True positives : 145
+False positives : 58
+True negatives : 97
+False negatives : 0
+Total : 300
+Accuracy : 0.8066666666666666
+
+8v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 223
+True positives : 147
+False positives : 76
+True negatives : 77
+False negatives : 0
+Total : 300
+Accuracy : 0.7466666666666667
+
+9v: 
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 198
+True positives : 137
+False positives : 61
+True negatives : 102
+False negatives : 0
+Total : 300
+Accuracy : 0.7966666666666666
+
+10v:
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 224
+True positives : 151
+False positives : 73
+True negatives : 76
+False negatives : 0
+Total : 300
+Accuracy : 0.7566666666666667
+
+11v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 211
+True positives : 142
+False positives : 69
+True negatives : 89
+False negatives : 0
+Total : 300
+Accuracy : 0.77
+
+12v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 213
+True positives : 146
+False positives : 67
+True negatives : 87
+False negatives : 0
+Total : 300
+Accuracy : 0.7766666666666666
+
+13v:
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 209
+True positives : 137
+False positives : 72
+True negatives : 90
+False negatives : 0
+Total : 299
+Accuracy : 0.7591973244147158
+
+14v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 209
+True positives : 135
+False positives : 74
+True negatives : 91
+False negatives : 0
+Total : 300
+Accuracy : 0.7533333333333333
+
+15v:
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 218
+True positives : 157
+False positives : 61
+True negatives : 82
+False negatives : 0
+Total : 300
+Accuracy : 0.7966666666666666
+
+16v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 207
+True positives : 140
+False positives : 67
+True negatives : 93
+False negatives : 0
+Total : 300
+Accuracy : 0.7766666666666666
+
+17v:
+
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 218
+True positives : 151
+False positives : 67
+True negatives : 81
+False negatives : 0
+Total : 299
+Accuracy : 0.7759197324414716
+
+
+18v:
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 211
+True positives : 144
+False positives : 67
+True negatives : 89
+False negatives : 0
+Total : 300
+Accuracy : 0.7766666666666666
+
+
+20vSpeed:
+Cantidad de rutas: 300
+Cantidad de detecciones de posible giro (TP + FP): 199
+True positives : 97
+False positives : 102
+True negatives : 52
+False negatives : 49
+Total : 300
+Accuracy : 0.49666666666666665
+
+
+
+
+Ya tengo creadas las rutas.
+Ahora debo ejecutarlas
+Para eso debo, crear un archivo sumo.cfg que las ejecute
+
+
+Lograr densidad vehicular constante. Considerar tiempo de partida como factor
+
+Paso 1.- cuanto se demora un vehiculo en recorrer la calle completa : aprox 21 segundos
+Paso 2.- distancia necesaria entre 2 vehículos para que no se vean afectados por el vehiculo que le precede(?)
+
+
+
+Definir densidad vehicular [LISTO]
+Ejecutar el algoritmo para un rango de densidades vehiculares
+Obtener resultados de eficacia
+
+La eficacia del algoritmo estará determinada por le comportamiento de los vehículos. Si hay muchas caravanas la precisión del algoritmo disminuye dependiendo de
+la cantidad de vehículos que realizan giros hacia la derecha y cuantos vehiculos que les prosiguen siguen rectos. 
+
+Densidad (k) se define como la cantidad de vehículos por unidad de largo en una calle. En flujo de tráfico, las dos densidades mas importantes son la
+densidad crítica (k_c) y la densidad de congestión (k_j). La densidad maxima alcanzable sobre flujo libre es k_c mientras que k_j es la densidad máxima
+que se alcanza en una congestión. Generalmente, la densidad de congestión es siete veces la densidad crítica. Inverso a la densidad es el espaciado (s),
+qye es la distancia entre dos vehículos medida entre los centros de dichos vehículos
+
+k = 1/s
+
+La densidad (k) dentro de un largo de calle (L) en un instante de tiempo dado (t1) es igual a la inversa del promedio del espaciado de n vehículos
+
+K(L, t1) = n/L = 1/s(t1)
+
+Encontrar:
+
+
+Vehiculo:
+    Distancia mínima entre vehículos: 2.5m
+
+    aceleración maxima: 2.6 m/s^2
+    desaceleración maxima: 4.5 m/s^2
+    desaceleración de emergencia: 9.0 m/s^2
+Largo de calle utilizado para simulación : 223.75 m
+
+
+
+Discusión
+    - Los escenarios expuestos se comportan de forma similar en cuanto a la variación de velocidad máxima
+    - A velocidades menores, el tiempo de predicción disminuye
+    - La perdida de paquetes para los diferentes escenarios, afecta recien a partir del 90% de perdida
+    - El delay asociado a las arquitecturas de comunicación, infuye directamente en el tiempo de predicción
+
+
+Conclusiones
+    - Los mejores resultados se ven en arquitecturas que usan solo Wave
+    - Los tiempos de predicción mejoran directamente con la velocidad máxima
+    - Dependiendo el tiempo de reacción del ciclista (incluir referencia), las velocidades  
+
+
+claustros del magister
+que profes tengo que tener en mi comisión
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ver la eficacia del algoritmo en base a la densidad vehicular!
+
+
+
+titulo de gráfica en caption
+Poner unidades en todos los ejes
+
+Para los graficos de perdida de paquete, ver el tiempo de predicción para los casos que si hubo detección
+Para los casos que no hay predicción, mostrar barras de porcentaje en los que no hubo detección
+
+Para velocidad fija, ver como afecta el tiempo de predicción con perdida de paquetes en sus diferentes porcentajes
+
+
+
+
+
+
+
+
+
+En WaveOnlyDelay a velocidad fija, Random Giro.
+Calcular cuanto falsos positivos y falsos negativos obtengo.
+
+
+Los cambios de velocidad
+
+Aumentar perdida de paquetes hasta que falle el algoritmo
+Incremento perida de paquetes de 1%
+
+
+Aclarar q la perdida es entre V y RSU
+
+
+Colocarme Fancy al momento de escribir las arquitecturas
+Edge computing, Cloud computing
+
+
+
+Agregar escenario V-Bici: 
+
+
+Trabajo futuro:
+5g
+
+
+Tareas:
+    
+    - Arreglar los casos en que detecta giro muy pronto 
+
+Velocidad maxima (MAX SPEED) 
+    - Ejecutar con los escenarios
+
+Perdida de paquete
+    
+Simulación:
+    - Ver como ejecutar la simulación con diferentes configuraciones iniciales para simular todos los escenarios1
+
+Escenarios:
+Vehiculo-RSU-(Delay)Server*(Delay)-Bici
+Vehiculo-RSU*-Bici
+Vehiculo-RSU*(DELAY)-Bici
+Vehiculo-Bici*
+
+######################################################################################################################
+
+- Enviar un mensaje con retardo de 200ms [LISTO]
+- Que se generen varias  velocidades maximas [LISTO]
+- Agregar delay a los mensajes para los escenarios [LISTO]
+- Definir la variable que controla el % de perdida de paquete [LISTO]
+- Simular perdida de mensajes [LISTO]
+- Random entre 1-100, siesq el numero es menor q el % de perdida querido, no hacer nada con el paquete [LISTO]
+
+-o de 200ms: [LISTO]
+{SOLUCION: Agregar el método HandleSelfMessage para manejar los beacons reenviados}
+    - [No era este el problema] No he logrado hacer que se reenvíe el beacon q se recibió en la RSU... quizas tenga q ver con q la RSU no está mandando beacons. (verificar esto en el omnet.ini)
+    - Otra posible solución: Hacer que al recibir el beacon, mande otro tipo de mensaje y q se procese ahí
+

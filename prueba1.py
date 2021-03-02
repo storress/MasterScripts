@@ -14,13 +14,16 @@ velocidad = []
 e_velocidad = []
 e_pos_x = []
 e_pos_y = []
+
+filename = 'rutas_win/final_density_19vSpeed.csv'
 # with open('pruebas/trazasGiro.csv') as csvfile:
 # with open('pruebas/pruebaxs.csv') as csvfile:
 # with open('rutas_win/single_intencion.csv') as csvfile:
 # with open('rutas/gpsWinConIntencion.csv') as csvfile:
 # with open('rutas/routes_with_intention.csv') as csvfile:
 # with open('rutas/routes_with_intention.csv') as csvfile:
-with open('rutas_win/test_generated_routes_intencion.csv') as csvfile:
+# with open('rutas_win/test_generated_routes_intencion.csv') as csvfile:
+with open(filename) as csvfile:
     data = [tuple(line) for line in csv.reader(csvfile, delimiter=',')]
 
 # define the first route
@@ -113,8 +116,9 @@ while i < len(data) - 1:
     end_route = False
 total_samples = true_negative + true_positive + false_negative + false_positive
 accuracy = float(true_positive + true_negative) / total_samples
+print(filename)
 print('Cantidad de rutas: ' + str(total_routes))
-print('Cantidad de detecciones correctas: ' + str(counter))
+print('Cantidad de detecciones de posible giro (TP + FP): ' + str(counter))
 print('True positives : ' + str(true_positive))
 print('False positives : ' + str(false_positive))
 print('True negatives : ' + str(true_negative))
