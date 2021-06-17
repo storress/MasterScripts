@@ -1,4 +1,4 @@
-scenario,packetLoss,maxSpeed,repetition
+scenario,packetLoss,maxSpeed,repetition,warningTime,collisionTime,predictedTurn
 WaveDelay,0.0,10.1,0,28.289071944228,29.6,1
 WaveDelay,0.0,10.1,1,28.209783396475,29.6,1
 WaveDelay,0.0,10.1,10,28.24090559309,29.6,1
